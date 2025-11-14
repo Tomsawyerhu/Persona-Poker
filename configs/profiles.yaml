@@ -1,21 +1,21 @@
 models:
   default:
-    api_key: "sk-e346078d76f546c2ab04f0f008126a91"
+    api_key: ""
     base_url: "https://dashscope.aliyuncs.com/compatible-mode/v1"
     model: "qwen3-max"
     temperature: 0.0
   qwen3-max-1:
-    api_key: "sk-e346078d76f546c2ab04f0f008126a91"
+    api_key: ""
     base_url: "https://dashscope.aliyuncs.com/compatible-mode/v1"
     model: "qwen3-max"
     temperature: 0.6
   qwen3-max-2:
-    api_key: "sk-e346078d76f546c2ab04f0f008126a91"
+    api_key: ""
     base_url: "https://dashscope.aliyuncs.com/compatible-mode/v1"
     model: "qwen3-max"
     temperature: 1.0
   qwen3-max-3:
-    api_key: "sk-e346078d76f546c2ab04f0f008126a91"
+    api_key: ""
     base_url: "https://dashscope.aliyuncs.com/compatible-mode/v1"
     model: "qwen3-max"
     temperature: 0.3
