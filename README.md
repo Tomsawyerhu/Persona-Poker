@@ -1,4 +1,4 @@
-# Persona-Poker: A Multi Agent Framework for Personalized Texas Hold em Playing Styles
+# Persona-Poker: A Multi Agent Framework for Personalized Texas Hold'em Playing Styles
 
 ## Introduction
 While extensive research on Texas Hold’em has focused on game-theoretic optimal (GTO) strategies and computational approaches to decision-making, this work shifts the focus from pure strategy optimization to the impact of personalized behavior on player performance. Personalization encompasses a wide range of human-like attributes, including playing style (e.g., tight-aggressive or loose-passive), betting patterns, timing behavior, and even non-verbal cues such as facial expressions and body language—elements that are critical in real-world poker but often overlooked in traditional AI models.
@@ -36,3 +36,12 @@ players = [
 ```bash
 python run.py
 ```
+
+4. Check log file under logs dir.
+
+## Results
+![Six Players 20 Round](./assets/six-player-20-round.png)
+
+
+## Acknowledgement
+This project is built upon the open-source Texas Hold'em framework [poker_ai](https://github.com/fedden/poker_ai).
