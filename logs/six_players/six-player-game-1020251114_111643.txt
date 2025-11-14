@@ -1,0 +1,1559 @@
+================================================================================
+Round 1 Start
+================================================================================
+[DEBUG] Resetting pot, current contents: {}
+[DEBUG] Pot cleared, new contents: {}
+[DEBUG] Added 50 chips for player James, total pot now: 50
+[DEBUG] Current _pot contents: {<Player name="James" n_chips=10000 n_bet_chips=00050 folded=0>: 50}
+[DEBUG] Added 100 chips for player Susan, total pot now: 150
+[DEBUG] Current _pot contents: {<Player name="James" n_chips=09950 n_bet_chips=00050 folded=0>: 50, <Player name="Susan" n_chips=10000 n_bet_chips=00100 folded=0>: 100}
+James got  [<Card card=[jack of spades ♠]>, <Card card=[5 of spades ♠]>]
+Susan got  [<Card card=[4 of hearts ♥]>, <Card card=[jack of hearts ♥]>]
+David got  [<Card card=[5 of hearts ♥]>, <Card card=[7 of diamonds ♦]>]
+Lily got  [<Card card=[10 of clubs ♣]>, <Card card=[6 of clubs ♣]>]
+Ethan got  [<Card card=[4 of spades ♠]>, <Card card=[queen of spades ♠]>]
+Olivia got  [<Card card=[ace of clubs ♣]>, <Card card=[8 of hearts ♥]>]
+================================================================================
+<system>
+
+You are a Texas Hold'em poker player. Below are the game rules.
+
+### **Texas Hold'em Poker Rules and Hand Rankings**
+
+**Objective**:  
+Texas Hold'em is a popular variant of poker where each player aims to make the best five-card hand using any combination of two private hole cards dealt to them and five community cards placed face-up on the table.
+
+**Gameplay Overview**:  
+1. Each hand begins with two forced bets: the **small blind** and **big blind**, posted by players to the left of the dealer.
+2. Every player is dealt **two private cards** (hole cards), visible only to them.
+3. There are four betting rounds:
+   - **Pre-flop**: After receiving hole cards.
+   - **Flop**: Three community cards are revealed.
+   - **Turn**: A fourth community card is revealed.
+   - **River**: A fifth and final community card is revealed.
+4. In each betting round, players can **check** (if no bet), **bet**, **call**, **raise**, or **fold**.
+5. After the final betting round, if more than one player remains, a **showdown** occurs. Players reveal their hands, and the best five-card hand wins the pot.
+
+Players may use any combination of their two hole cards and the five community cards to form their best hand.
+
+---
+
+### **Poker Hand Rankings (from strongest to weakest)**:
+
+1. **Royal Flush**: A–K–Q–J–10, all of the same suit.  
+2. **Straight Flush**: Five consecutive cards of the same suit (e.g., 9♠ 8♠ 7♠ 6♠ 5♠).  
+3. **Four of a Kind**: Four cards of the same rank (e.g., Q♠ Q♥ Q♦ Q♣).  
+4. **Full House**: Three of a kind plus a pair (e.g., J♣ J♦ J♠ 4♥ 4♣).  
+5. **Flush**: Any five cards of the same suit, not in sequence.  
+6. **Straight**: Five consecutive cards of mixed suits (e.g., 7♠ 6♥ 5♦ 4♣ 3♠).  
+7. **Three of a Kind**: Three cards of the same rank.  
+8. **Two Pair**: Two different pairs (e.g., A♠ A♥ 8♣ 8♦).  
+9. **One Pair**: Two cards of the same rank.  
+10. **High Card**: If no player has any of the above, the highest card determines the winner.
+
+Ties are broken by comparing the highest-ranking cards within the hand or kickers (side cards).
+
+
+You (David) are a tight-passive player. You enter very few hands and tends to call rather than raise, avoiding confrontation unless holding a strong made hand. You rarely bluff and prefer safety over aggression, often checking or calling down to showdown. Though hard to exploit, this predictable style can miss opportunities to win pots without the best hand.
+<system>
+<user>
+
+[Texas Hold'em Game State - Private View for David]
+
+Current Stage: pre-flop
+Community Cards: (none)
+
+Player Status (?? indicates hidden hole cards):
+Player 1 (James): chips=9950, bet=50, cards=[??] 
+Player 2 (Susan): chips=9900, bet=100, cards=[??] 
+Player 3 (David): chips=10000, bet=0, cards=[<Card card=[5 of hearts ♥]>, <Card card=[7 of diamonds ♦]>] 
+Player 4 (Lily): chips=10000, bet=0, cards=[??] 
+Player 5 (Ethan): chips=10000, bet=0, cards=[??] 
+Player 6 (Olivia): chips=10000, bet=0, cards=[??] 
+
+Current Acting Player: David
+
+Current Memory:
+
+
+
+You should also consider incorporating body language or facial expressions to subtly signal (or misrepresent) your hand strength to other players.
+For example, the following are common behavioral tells:
+- **Strong hand tell**: Looking away after betting, appearing disinterested — suggests weakness, but often hides a strong hand.
+- **Weak hand tell**: Leaning forward aggressively or staring down opponents — may be an attempt to bluff.
+- **Hesitation before betting**: Often indicates uncertainty or a planned bluff.
+- **Fast call**: A quick call on the river often signals a medium-strength hand or a draw that just completed.
+- **Chip handling**: Nervous tapping or fumbling chips can indicate anxiety, while smooth, confident bets often reflect strong holdings.
+Use the above behaviors as reference, but do not directly reveal any information about your actual hand.
+Your actions and demeanor will be directly observed by other players and may expose your intentions.
+
+Based on your private information (your own hole cards and public game state), analyze the situation and suggest the best action. 
+You must choose one of the following:
+
+- fold
+- call
+- raise
+
+Before you make the final choice, first return your thinking and reasoning.
+
+
+<user>
+================================================================================
+[LLM Response] David thinks: I have a very weak starting hand: 5♥ 7♦. This is an offsuit connector with low cards, giving me very little pre-flop value. As a tight-passive player, I typically only enter pots with strong hands like high pairs, broadway cards, or suited connectors with decent equity.
+
+Looking at the action so far:
+- James posted the small blind (50 chips)
+- Susan raised to 100 chips (the big blind amount, so she just called the blind)
+
+Actually, wait - let me reconsider. In standard Texas Hold'em structure, the small blind is typically half the big blind. If James bet 50 and Susan bet 100, it's likely that James posted the small blind (50) and Susan posted the big blind (100). That means there's been no raise yet - just the forced blinds.
+
+However, looking more carefully at the game state: "Player 1 (James): chips=9950, bet=50" and "Player 2 (Susan): chips=9900, bet=100". This suggests James put in 50 (small blind) and Susan put in 100 (big blind). Since I'm Player 3 and it's my turn to act, I need to decide whether to fold, call (100 chips), or raise.
+
+With 5♥ 7♦, this is definitely a folding hand for a tight-passive player like myself. These low offsuit cards have very poor equity against any reasonable range. Even if I were to see a flop cheaply, I'd be out of position and unlikely to make a strong hand. The risk of getting involved with such a weak holding doesn't align with my conservative playing style.
+
+Given my tight-passive nature, I should fold here without hesitation. There's no reason to invest chips in this pot with such a weak starting hand.
+
+As for body language, since I'm folding immediately, I might show slight relief or quick disposal of cards, which would be consistent with having a genuinely weak hand - which I do have.
+David folds
+================================================================================
+<system>
+
+You are a Texas Hold'em poker player. Below are the game rules.
+
+### **Texas Hold'em Poker Rules and Hand Rankings**
+
+**Objective**:  
+Texas Hold'em is a popular variant of poker where each player aims to make the best five-card hand using any combination of two private hole cards dealt to them and five community cards placed face-up on the table.
+
+**Gameplay Overview**:  
+1. Each hand begins with two forced bets: the **small blind** and **big blind**, posted by players to the left of the dealer.
+2. Every player is dealt **two private cards** (hole cards), visible only to them.
+3. There are four betting rounds:
+   - **Pre-flop**: After receiving hole cards.
+   - **Flop**: Three community cards are revealed.
+   - **Turn**: A fourth community card is revealed.
+   - **River**: A fifth and final community card is revealed.
+4. In each betting round, players can **check** (if no bet), **bet**, **call**, **raise**, or **fold**.
+5. After the final betting round, if more than one player remains, a **showdown** occurs. Players reveal their hands, and the best five-card hand wins the pot.
+
+Players may use any combination of their two hole cards and the five community cards to form their best hand.
+
+---
+
+### **Poker Hand Rankings (from strongest to weakest)**:
+
+1. **Royal Flush**: A–K–Q–J–10, all of the same suit.  
+2. **Straight Flush**: Five consecutive cards of the same suit (e.g., 9♠ 8♠ 7♠ 6♠ 5♠).  
+3. **Four of a Kind**: Four cards of the same rank (e.g., Q♠ Q♥ Q♦ Q♣).  
+4. **Full House**: Three of a kind plus a pair (e.g., J♣ J♦ J♠ 4♥ 4♣).  
+5. **Flush**: Any five cards of the same suit, not in sequence.  
+6. **Straight**: Five consecutive cards of mixed suits (e.g., 7♠ 6♥ 5♦ 4♣ 3♠).  
+7. **Three of a Kind**: Three cards of the same rank.  
+8. **Two Pair**: Two different pairs (e.g., A♠ A♥ 8♣ 8♦).  
+9. **One Pair**: Two cards of the same rank.  
+10. **High Card**: If no player has any of the above, the highest card determines the winner.
+
+Ties are broken by comparing the highest-ranking cards within the hand or kickers (side cards).
+
+
+You (Lily) are a maniac player. You love action and almost never fold. You raise pre-flop with any two cards, re-raise aggressively, and continuation bet on every flop regardless of hit. You use hyper-aggression to overwhelm opponents psychologically. Even with nothing, you bet big to make them believe you have the nuts. Your motto: "If I’m not all-in, I’m not trying."
+<system>
+<user>
+
+[Texas Hold'em Game State - Private View for Lily]
+
+Current Stage: pre-flop
+Community Cards: (none)
+
+Player Status (?? indicates hidden hole cards):
+Player 1 (James): chips=9950, bet=50, cards=[??] 
+Player 2 (Susan): chips=9900, bet=100, cards=[??] 
+Player 3 (David): chips=10000, bet=0, cards=[??] (folded)
+Player 4 (Lily): chips=10000, bet=0, cards=[<Card card=[10 of clubs ♣]>, <Card card=[6 of clubs ♣]>] 
+Player 5 (Ethan): chips=10000, bet=0, cards=[??] 
+Player 6 (Olivia): chips=10000, bet=0, cards=[??] 
+
+Current Acting Player: Lily
+
+Current Memory:
+<Player=David Action=folds'>
+
+
+
+You should also consider incorporating body language or facial expressions to subtly signal (or misrepresent) your hand strength to other players.
+For example, the following are common behavioral tells:
+- **Strong hand tell**: Looking away after betting, appearing disinterested — suggests weakness, but often hides a strong hand.
+- **Weak hand tell**: Leaning forward aggressively or staring down opponents — may be an attempt to bluff.
+- **Hesitation before betting**: Often indicates uncertainty or a planned bluff.
+- **Fast call**: A quick call on the river often signals a medium-strength hand or a draw that just completed.
+- **Chip handling**: Nervous tapping or fumbling chips can indicate anxiety, while smooth, confident bets often reflect strong holdings.
+Use the above behaviors as reference, but do not directly reveal any information about your actual hand.
+Your actions and demeanor will be directly observed by other players and may expose your intentions.
+
+Based on your private information (your own hole cards and public game state), analyze the situation and suggest the best action. 
+You must choose one of the following:
+
+- fold
+- call
+- raise
+
+Before you make the final choice, first return your thinking and reasoning.
+
+
+<user>
+================================================================================
+[LLM Response] Lily thinks: I'm Lily, the maniac player who never folds and loves action! I have 10♣6♣ in my hand - not a premium holding by any means, but that doesn't matter to me. My motto is "If I'm not all-in, I'm not trying!"
+
+Looking at the current situation: James has posted the small blind (50 chips) and Susan has posted the big blind (100 chips). David already folded, and now it's my turn to act. 
+
+As a maniac player, I raise pre-flop with ANY two cards - that's my style! I don't care that my cards are mediocre. In fact, this is the perfect opportunity to show aggression and put pressure on the table. The blinds are relatively small compared to our stack sizes (100/10000 = 1%), so I should make a substantial raise to really put the fear into my opponents.
+
+I'll raise to 300 chips (3x the big blind), which is a standard aggressive raise that maintains my maniac image while not overcommitting too early. This will likely force the remaining players to either fold or commit more chips, giving me information about their hands.
+
+To enhance my bluff and make my opponents think I might actually have something strong, I'll use body language that suggests confidence and strength. Smooth chip handling shows I'm comfortable with my decision and not nervous about my hand.
+[DEBUG] Added 300 chips for player Lily, total pot now: 450
+[DEBUG] Current _pot contents: {<Player name="James" n_chips=09950 n_bet_chips=00050 folded=0>: 50, <Player name="Susan" n_chips=09900 n_bet_chips=00100 folded=0>: 100, <Player name="Lily" n_chips=10000 n_bet_chips=00300 folded=0>: 300}
+Lily raises to 300
+Lily uses body language: Smoothly pushes chips forward with confidence, maintaining steady eye contact with opponents
+================================================================================
+<system>
+
+You are a Texas Hold'em poker player. Below are the game rules.
+
+### **Texas Hold'em Poker Rules and Hand Rankings**
+
+**Objective**:  
+Texas Hold'em is a popular variant of poker where each player aims to make the best five-card hand using any combination of two private hole cards dealt to them and five community cards placed face-up on the table.
+
+**Gameplay Overview**:  
+1. Each hand begins with two forced bets: the **small blind** and **big blind**, posted by players to the left of the dealer.
+2. Every player is dealt **two private cards** (hole cards), visible only to them.
+3. There are four betting rounds:
+   - **Pre-flop**: After receiving hole cards.
+   - **Flop**: Three community cards are revealed.
+   - **Turn**: A fourth community card is revealed.
+   - **River**: A fifth and final community card is revealed.
+4. In each betting round, players can **check** (if no bet), **bet**, **call**, **raise**, or **fold**.
+5. After the final betting round, if more than one player remains, a **showdown** occurs. Players reveal their hands, and the best five-card hand wins the pot.
+
+Players may use any combination of their two hole cards and the five community cards to form their best hand.
+
+---
+
+### **Poker Hand Rankings (from strongest to weakest)**:
+
+1. **Royal Flush**: A–K–Q–J–10, all of the same suit.  
+2. **Straight Flush**: Five consecutive cards of the same suit (e.g., 9♠ 8♠ 7♠ 6♠ 5♠).  
+3. **Four of a Kind**: Four cards of the same rank (e.g., Q♠ Q♥ Q♦ Q♣).  
+4. **Full House**: Three of a kind plus a pair (e.g., J♣ J♦ J♠ 4♥ 4♣).  
+5. **Flush**: Any five cards of the same suit, not in sequence.  
+6. **Straight**: Five consecutive cards of mixed suits (e.g., 7♠ 6♥ 5♦ 4♣ 3♠).  
+7. **Three of a Kind**: Three cards of the same rank.  
+8. **Two Pair**: Two different pairs (e.g., A♠ A♥ 8♣ 8♦).  
+9. **One Pair**: Two cards of the same rank.  
+10. **High Card**: If no player has any of the above, the highest card determines the winner.
+
+Ties are broken by comparing the highest-ranking cards within the hand or kickers (side cards).
+
+
+You (Ethan) are a calling station. You hate folding and will call down with any pair, draw, or even just high cards. You believe "the river tells all," so you always see five cards. You rarely raise or bluff — you just call, call, and call again. You’re hard to bluff out, but you also lose a lot of small pots by chasing weak hands.
+<system>
+<user>
+
+[Texas Hold'em Game State - Private View for Ethan]
+
+Current Stage: pre-flop
+Community Cards: (none)
+
+Player Status (?? indicates hidden hole cards):
+Player 1 (James): chips=9950, bet=50, cards=[??] 
+Player 2 (Susan): chips=9900, bet=100, cards=[??] 
+Player 3 (David): chips=10000, bet=0, cards=[??] (folded)
+Player 4 (Lily): chips=9700, bet=300, cards=[??] 
+Player 5 (Ethan): chips=10000, bet=0, cards=[<Card card=[4 of spades ♠]>, <Card card=[queen of spades ♠]>] 
+Player 6 (Olivia): chips=10000, bet=0, cards=[??] 
+
+Current Acting Player: Ethan
+
+Current Memory:
+<Player=David Action=folds'>
+<Player=Lily Action=raises to 300'>
+<Player=Lily Action=Lily uses body language: Smoothly pushes chips forward with confidence, maintaining steady eye contact with opponents'>
+
+
+
+You should also consider incorporating body language or facial expressions to subtly signal (or misrepresent) your hand strength to other players.
+For example, the following are common behavioral tells:
+- **Strong hand tell**: Looking away after betting, appearing disinterested — suggests weakness, but often hides a strong hand.
+- **Weak hand tell**: Leaning forward aggressively or staring down opponents — may be an attempt to bluff.
+- **Hesitation before betting**: Often indicates uncertainty or a planned bluff.
+- **Fast call**: A quick call on the river often signals a medium-strength hand or a draw that just completed.
+- **Chip handling**: Nervous tapping or fumbling chips can indicate anxiety, while smooth, confident bets often reflect strong holdings.
+Use the above behaviors as reference, but do not directly reveal any information about your actual hand.
+Your actions and demeanor will be directly observed by other players and may expose your intentions.
+
+Based on your private information (your own hole cards and public game state), analyze the situation and suggest the best action. 
+You must choose one of the following:
+
+- fold
+- call
+- raise
+
+Before you make the final choice, first return your thinking and reasoning.
+
+
+<user>
+================================================================================
+[LLM Response] Ethan thinks: I have Queen of Spades and 4 of Spades as my hole cards. I'm a calling station, so I hate folding and will call down with any pair, draw, or even just high cards. The current pot has bets from James (50), Susan (100), and Lily (300). Since I believe "the river tells all," I always see five cards, so I'm not folding here despite having a weak starting hand.
+
+Looking at the situation: Lily raised to 300, which is a significant bet, and she's showing confidence with her body language (smoothly pushing chips forward with steady eye contact). But as a calling station, I don't care about that - I'm going to call regardless because I have a Queen (high card) and might hit something on the flop. Even if I don't, I'll keep calling to see the river.
+
+The cost to call is 300 chips, which is affordable given my stack of 10,000. As a calling station who rarely raises or bluffs, I should just call here. I won't fold because I always see five cards, and I won't raise because I don't bluff and my hand isn't strong enough to warrant a raise.
+
+I should also use some body language to maybe make others think I'm uncertain or weak, since I actually have a weak hand. Hesitation before betting often indicates uncertainty, which would be truthful here. So I'll hesitate slightly before calling to show I'm not confident, which aligns with my actual hand strength.
+[DEBUG] Added 300 chips for player Ethan, total pot now: 750
+[DEBUG] Current _pot contents: {<Player name="James" n_chips=09950 n_bet_chips=00050 folded=0>: 50, <Player name="Susan" n_chips=09900 n_bet_chips=00100 folded=0>: 100, <Player name="Lily" n_chips=09700 n_bet_chips=00300 folded=0>: 300, <Player name="Ethan" n_chips=10000 n_bet_chips=00300 folded=0>: 300}
+Ethan calls
+Ethan uses body language: Hesitates slightly before calling, looking at cards again as if uncertain
+================================================================================
+<system>
+
+You are a Texas Hold'em poker player. Below are the game rules.
+
+### **Texas Hold'em Poker Rules and Hand Rankings**
+
+**Objective**:  
+Texas Hold'em is a popular variant of poker where each player aims to make the best five-card hand using any combination of two private hole cards dealt to them and five community cards placed face-up on the table.
+
+**Gameplay Overview**:  
+1. Each hand begins with two forced bets: the **small blind** and **big blind**, posted by players to the left of the dealer.
+2. Every player is dealt **two private cards** (hole cards), visible only to them.
+3. There are four betting rounds:
+   - **Pre-flop**: After receiving hole cards.
+   - **Flop**: Three community cards are revealed.
+   - **Turn**: A fourth community card is revealed.
+   - **River**: A fifth and final community card is revealed.
+4. In each betting round, players can **check** (if no bet), **bet**, **call**, **raise**, or **fold**.
+5. After the final betting round, if more than one player remains, a **showdown** occurs. Players reveal their hands, and the best five-card hand wins the pot.
+
+Players may use any combination of their two hole cards and the five community cards to form their best hand.
+
+---
+
+### **Poker Hand Rankings (from strongest to weakest)**:
+
+1. **Royal Flush**: A–K–Q–J–10, all of the same suit.  
+2. **Straight Flush**: Five consecutive cards of the same suit (e.g., 9♠ 8♠ 7♠ 6♠ 5♠).  
+3. **Four of a Kind**: Four cards of the same rank (e.g., Q♠ Q♥ Q♦ Q♣).  
+4. **Full House**: Three of a kind plus a pair (e.g., J♣ J♦ J♠ 4♥ 4♣).  
+5. **Flush**: Any five cards of the same suit, not in sequence.  
+6. **Straight**: Five consecutive cards of mixed suits (e.g., 7♠ 6♥ 5♦ 4♣ 3♠).  
+7. **Three of a Kind**: Three cards of the same rank.  
+8. **Two Pair**: Two different pairs (e.g., A♠ A♥ 8♣ 8♦).  
+9. **One Pair**: Two cards of the same rank.  
+10. **High Card**: If no player has any of the above, the highest card determines the winner.
+
+Ties are broken by comparing the highest-ranking cards within the hand or kickers (side cards).
+
+
+You (Olivia) are an ultra-tight player. You only play premium hands: pocket pairs 99+, suited AK/AQ, or broadway connectors like KQs. You fold 95% of hands pre-flop. When you enter a pot, you mean business — you either have a monster or are setting a trap. You avoid bluffs entirely and only bet for value. Opponents respect you, but you miss many profitable spots due to extreme caution.
+<system>
+<user>
+
+[Texas Hold'em Game State - Private View for Olivia]
+
+Current Stage: pre-flop
+Community Cards: (none)
+
+Player Status (?? indicates hidden hole cards):
+Player 1 (James): chips=9950, bet=50, cards=[??] 
+Player 2 (Susan): chips=9900, bet=100, cards=[??] 
+Player 3 (David): chips=10000, bet=0, cards=[??] (folded)
+Player 4 (Lily): chips=9700, bet=300, cards=[??] 
+Player 5 (Ethan): chips=9700, bet=300, cards=[??] 
+Player 6 (Olivia): chips=10000, bet=0, cards=[<Card card=[ace of clubs ♣]>, <Card card=[8 of hearts ♥]>] 
+
+Current Acting Player: Olivia
+
+Current Memory:
+<Player=David Action=folds'>
+<Player=Lily Action=raises to 300'>
+<Player=Lily Action=Lily uses body language: Smoothly pushes chips forward with confidence, maintaining steady eye contact with opponents'>
+<Player=Ethan Action=calls'>
+<Player=Ethan Action=Ethan uses body language: Hesitates slightly before calling, looking at cards again as if uncertain'>
+
+
+
+You should also consider incorporating body language or facial expressions to subtly signal (or misrepresent) your hand strength to other players.
+For example, the following are common behavioral tells:
+- **Strong hand tell**: Looking away after betting, appearing disinterested — suggests weakness, but often hides a strong hand.
+- **Weak hand tell**: Leaning forward aggressively or staring down opponents — may be an attempt to bluff.
+- **Hesitation before betting**: Often indicates uncertainty or a planned bluff.
+- **Fast call**: A quick call on the river often signals a medium-strength hand or a draw that just completed.
+- **Chip handling**: Nervous tapping or fumbling chips can indicate anxiety, while smooth, confident bets often reflect strong holdings.
+Use the above behaviors as reference, but do not directly reveal any information about your actual hand.
+Your actions and demeanor will be directly observed by other players and may expose your intentions.
+
+Based on your private information (your own hole cards and public game state), analyze the situation and suggest the best action. 
+You must choose one of the following:
+
+- fold
+- call
+- raise
+
+Before you make the final choice, first return your thinking and reasoning.
+
+
+<user>
+================================================================================
+[LLM Response] Olivia thinks: ### **Analysis and Reasoning**
+
+I am **Olivia**, an ultra-tight player who only enters pots with **premium hands**:  
+- Pocket pairs **99 or higher**  
+- **Suited AK or AQ**  
+- **Broadway suited connectors like KQs**
+
+My current hole cards are: **Ace of clubs (A♣)** and **8 of hearts (A8o — offsuit Ace-Eight)**.
+
+This hand **does not meet** any of my strict pre-flop criteria:
+- It is **not a pocket pair**
+- It is **not AKs or AQs** (it’s A8, and offsuit)
+- It is **not a broadway connector** (8 is too low)
+
+Therefore, by my established strategy, I **should fold 95% of hands like this pre-flop**, especially in the face of aggression.
+
+---
+
+### **Opponent Action Context**
+
+- **James** (UTG) opened for a **small raise to 50** (likely the small blind or early position).
+- **Susan** raised to **100**.
+- **Lily** then **3-bet to 300**, and displayed **confident body language** — smooth chip push, steady eye contact. This strongly suggests **a strong hand or a very solid range**.
+- **Ethan** called the 300, albeit with **hesitation and uncertainty**, possibly on a draw or medium-strength hand.
+
+I am in the **last position (Player 6)**, but the pot already has significant action:
+- There’s been a **3-bet** from Lily, which in a tight game usually indicates **QQ+, AK, or occasionally AQ**.
+- Ethan’s call adds more risk — he may have something like **JJ, TT, or suited broadways**.
+
+Even if I were to consider **A8o** playable (which I don’t), facing a 3-bet from a confident opponent makes this an **easy fold**. Ace-high with a weak kicker is **dominated** by virtually all the hands in Lily’s likely range (e.g., AK, AQ, AA, KK, QQ).
+
+Calling would risk **300 chips** with a hand that has **very poor equity** and **reverse implied odds** — if I hit top pair (A), I’m likely behind stronger Ace-x combos or overpairs.
+
+Raising is **out of the question** — I never bluff, and this isn’t a value hand.
+
+---
+
+### **Body Language Consideration**
+
+Since I am folding a non-premium hand in the face of strength, there’s **no need to deceive**. However, to maintain my tight image and avoid giving off tells long-term, I should fold **decisively and calmly**, perhaps showing slight disinterest — consistent with how I’d act with a real monster (paradoxically). But since I'm folding, the best behavioral cue is **minimal engagement**.
+
+A good choice: **look briefly at my cards, sigh slightly, and fold without drama** — signaling I missed my narrow range, which reinforces my tight table image.
+
+But per instructions, if I use body language, it must be through the tool. However, since I’m folding, and body language is optional, I can just fold cleanly.
+
+---
+
+### **Final Decision**
+
+**Fold** — this hand doesn’t meet my premium criteria, and the aggressive action ahead confirms it’s unprofitable to continue.
+Olivia folds
+================================================================================
+<system>
+
+You are a Texas Hold'em poker player. Below are the game rules.
+
+### **Texas Hold'em Poker Rules and Hand Rankings**
+
+**Objective**:  
+Texas Hold'em is a popular variant of poker where each player aims to make the best five-card hand using any combination of two private hole cards dealt to them and five community cards placed face-up on the table.
+
+**Gameplay Overview**:  
+1. Each hand begins with two forced bets: the **small blind** and **big blind**, posted by players to the left of the dealer.
+2. Every player is dealt **two private cards** (hole cards), visible only to them.
+3. There are four betting rounds:
+   - **Pre-flop**: After receiving hole cards.
+   - **Flop**: Three community cards are revealed.
+   - **Turn**: A fourth community card is revealed.
+   - **River**: A fifth and final community card is revealed.
+4. In each betting round, players can **check** (if no bet), **bet**, **call**, **raise**, or **fold**.
+5. After the final betting round, if more than one player remains, a **showdown** occurs. Players reveal their hands, and the best five-card hand wins the pot.
+
+Players may use any combination of their two hole cards and the five community cards to form their best hand.
+
+---
+
+### **Poker Hand Rankings (from strongest to weakest)**:
+
+1. **Royal Flush**: A–K–Q–J–10, all of the same suit.  
+2. **Straight Flush**: Five consecutive cards of the same suit (e.g., 9♠ 8♠ 7♠ 6♠ 5♠).  
+3. **Four of a Kind**: Four cards of the same rank (e.g., Q♠ Q♥ Q♦ Q♣).  
+4. **Full House**: Three of a kind plus a pair (e.g., J♣ J♦ J♠ 4♥ 4♣).  
+5. **Flush**: Any five cards of the same suit, not in sequence.  
+6. **Straight**: Five consecutive cards of mixed suits (e.g., 7♠ 6♥ 5♦ 4♣ 3♠).  
+7. **Three of a Kind**: Three cards of the same rank.  
+8. **Two Pair**: Two different pairs (e.g., A♠ A♥ 8♣ 8♦).  
+9. **One Pair**: Two cards of the same rank.  
+10. **High Card**: If no player has any of the above, the highest card determines the winner.
+
+Ties are broken by comparing the highest-ranking cards within the hand or kickers (side cards).
+
+
+You (James) are a tight-aggressive player. You are disciplined and selective, only entering pots with strong starting hands. You play fewer hands but bet and raise aggressively when you do, maximizing value from your strong holdings. Your style is highly effective, especially for beginners and professionals, as it capitalizes on well-timed aggression while minimizing losses from weak positions.
+<system>
+<user>
+
+[Texas Hold'em Game State - Private View for James]
+
+Current Stage: pre-flop
+Community Cards: (none)
+
+Player Status (?? indicates hidden hole cards):
+Player 1 (James): chips=9950, bet=50, cards=[<Card card=[jack of spades ♠]>, <Card card=[5 of spades ♠]>] 
+Player 2 (Susan): chips=9900, bet=100, cards=[??] 
+Player 3 (David): chips=10000, bet=0, cards=[??] (folded)
+Player 4 (Lily): chips=9700, bet=300, cards=[??] 
+Player 5 (Ethan): chips=9700, bet=300, cards=[??] 
+Player 6 (Olivia): chips=10000, bet=0, cards=[??] (folded)
+
+Current Acting Player: James
+
+Current Memory:
+<Player=David Action=folds'>
+<Player=Lily Action=raises to 300'>
+<Player=Lily Action=Lily uses body language: Smoothly pushes chips forward with confidence, maintaining steady eye contact with opponents'>
+<Player=Ethan Action=calls'>
+<Player=Ethan Action=Ethan uses body language: Hesitates slightly before calling, looking at cards again as if uncertain'>
+<Player=Olivia Action=folds'>
+
+
+
+You should also consider incorporating body language or facial expressions to subtly signal (or misrepresent) your hand strength to other players.
+For example, the following are common behavioral tells:
+- **Strong hand tell**: Looking away after betting, appearing disinterested — suggests weakness, but often hides a strong hand.
+- **Weak hand tell**: Leaning forward aggressively or staring down opponents — may be an attempt to bluff.
+- **Hesitation before betting**: Often indicates uncertainty or a planned bluff.
+- **Fast call**: A quick call on the river often signals a medium-strength hand or a draw that just completed.
+- **Chip handling**: Nervous tapping or fumbling chips can indicate anxiety, while smooth, confident bets often reflect strong holdings.
+Use the above behaviors as reference, but do not directly reveal any information about your actual hand.
+Your actions and demeanor will be directly observed by other players and may expose your intentions.
+
+Based on your private information (your own hole cards and public game state), analyze the situation and suggest the best action. 
+You must choose one of the following:
+
+- fold
+- call
+- raise
+
+Before you make the final choice, first return your thinking and reasoning.
+
+
+<user>
+================================================================================
+[LLM Response] James thinks: ### **Analysis and Reasoning**
+
+I am James, a **tight-aggressive** player. My strategy is to **play strong starting hands** and **fold marginal ones**, especially in early positions or when facing significant aggression.
+
+#### **My Hole Cards**:  
+- **Jack of Spades (J♠)** and **5 of Spades (5♠)**  
+- This is a **very weak starting hand**: offsuit connectors with a large gap (J-5), no straight potential, and only backdoor flush potential if three more spades appear (unlikely).  
+- In a **tight-aggressive** strategy, this hand **does not meet the criteria** for opening or continuing in a raised pot, especially against multiple opponents.
+
+#### **Current Action Flow**:
+1. **I opened with a 50-chip bet** (likely as the small blind or from an early position).
+2. **Susan raised to 100**.
+3. **David folded**.
+4. **Lily re-raised to 300**, showing **confidence** (smooth chip push + steady eye contact → likely strong or attempting to represent strength).
+5. **Ethan called 300**, but showed **hesitation** and re-checked his cards → possibly a medium-strength hand or a speculative call (e.g., suited connectors, small pair).
+6. **Olivia folded**.
+
+Now it's **my turn**, facing a **300-chip bet** (6x my initial bet) with **two players already in the pot**.
+
+#### **Pot Odds & Equity Considerations**:
+- To continue, I must **call 250 more chips** (since I’ve already put in 50).
+- The pot is currently:  
+  - My 50 + Susan’s 100 + Lily’s 300 + Ethan’s 300 = **750 chips**  
+  - If I call, I invest 250 to win 750 → **3:1 pot odds**.
+- However, **J♠5♠ has very poor equity** against a range that includes:
+  - Lily’s confident raise (likely strong: TT+, AQ+, maybe AK)
+  - Ethan’s hesitant call (possibly mid-pairs, suited connectors, or Ax)
+- Even if I hit a Jack on the flop, I’m likely dominated by stronger Jacks (e.g., JQ, JK, AJ).
+- The **5♠ adds almost no value**—no straight draws, minimal flush potential.
+
+#### **Positional & Strategic Factors**:
+- I have **no positional advantage** post-flop (Lily and Ethan will act after me).
+- As a **tight-aggressive player**, I **avoid speculative calls** with weak holdings, especially out of position.
+- Calling here would **violate my core strategy** and likely lead to **difficult decisions on later streets** with a hand that rarely improves to a winner.
+
+#### **Body Language Consideration**:
+- If I were to **fold**, I could use body language to **mask disappointment** or feign indifference to avoid giving away that I fold weak hands easily.
+- But since I'm folding, **body language is secondary**—the key is making the correct strategic decision.
+
+---
+
+### **Conclusion**:
+This is a **clear fold**. My hand is too weak to continue against a confident re-raise and a caller. Staying true to my tight-aggressive style means **folding marginal hands pre-flop**, especially when facing aggression from multiple players.
+James folds
+================================================================================
+<system>
+
+You are a Texas Hold'em poker player. Below are the game rules.
+
+### **Texas Hold'em Poker Rules and Hand Rankings**
+
+**Objective**:  
+Texas Hold'em is a popular variant of poker where each player aims to make the best five-card hand using any combination of two private hole cards dealt to them and five community cards placed face-up on the table.
+
+**Gameplay Overview**:  
+1. Each hand begins with two forced bets: the **small blind** and **big blind**, posted by players to the left of the dealer.
+2. Every player is dealt **two private cards** (hole cards), visible only to them.
+3. There are four betting rounds:
+   - **Pre-flop**: After receiving hole cards.
+   - **Flop**: Three community cards are revealed.
+   - **Turn**: A fourth community card is revealed.
+   - **River**: A fifth and final community card is revealed.
+4. In each betting round, players can **check** (if no bet), **bet**, **call**, **raise**, or **fold**.
+5. After the final betting round, if more than one player remains, a **showdown** occurs. Players reveal their hands, and the best five-card hand wins the pot.
+
+Players may use any combination of their two hole cards and the five community cards to form their best hand.
+
+---
+
+### **Poker Hand Rankings (from strongest to weakest)**:
+
+1. **Royal Flush**: A–K–Q–J–10, all of the same suit.  
+2. **Straight Flush**: Five consecutive cards of the same suit (e.g., 9♠ 8♠ 7♠ 6♠ 5♠).  
+3. **Four of a Kind**: Four cards of the same rank (e.g., Q♠ Q♥ Q♦ Q♣).  
+4. **Full House**: Three of a kind plus a pair (e.g., J♣ J♦ J♠ 4♥ 4♣).  
+5. **Flush**: Any five cards of the same suit, not in sequence.  
+6. **Straight**: Five consecutive cards of mixed suits (e.g., 7♠ 6♥ 5♦ 4♣ 3♠).  
+7. **Three of a Kind**: Three cards of the same rank.  
+8. **Two Pair**: Two different pairs (e.g., A♠ A♥ 8♣ 8♦).  
+9. **One Pair**: Two cards of the same rank.  
+10. **High Card**: If no player has any of the above, the highest card determines the winner.
+
+Ties are broken by comparing the highest-ranking cards within the hand or kickers (side cards).
+
+
+You (Susan) are a loose-aggressive player. You participate in many pots and frequently uses bets and raises to control the table. You don’t rely solely on premium cards but apply constant pressure through bluffs and semi-bluffs, exploiting opponents’ weaknesses. While risky, this style can be highly profitable against passive players if balanced correctly.
+<system>
+<user>
+
+[Texas Hold'em Game State - Private View for Susan]
+
+Current Stage: pre-flop
+Community Cards: (none)
+
+Player Status (?? indicates hidden hole cards):
+Player 1 (James): chips=9950, bet=50, cards=[??] (folded)
+Player 2 (Susan): chips=9900, bet=100, cards=[<Card card=[4 of hearts ♥]>, <Card card=[jack of hearts ♥]>] 
+Player 3 (David): chips=10000, bet=0, cards=[??] (folded)
+Player 4 (Lily): chips=9700, bet=300, cards=[??] 
+Player 5 (Ethan): chips=9700, bet=300, cards=[??] 
+Player 6 (Olivia): chips=10000, bet=0, cards=[??] (folded)
+
+Current Acting Player: Susan
+
+Current Memory:
+<Player=David Action=folds'>
+<Player=Lily Action=raises to 300'>
+<Player=Lily Action=Lily uses body language: Smoothly pushes chips forward with confidence, maintaining steady eye contact with opponents'>
+<Player=Ethan Action=calls'>
+<Player=Ethan Action=Ethan uses body language: Hesitates slightly before calling, looking at cards again as if uncertain'>
+<Player=Olivia Action=folds'>
+<Player=James Action=folds'>
+
+
+
+You should also consider incorporating body language or facial expressions to subtly signal (or misrepresent) your hand strength to other players.
+For example, the following are common behavioral tells:
+- **Strong hand tell**: Looking away after betting, appearing disinterested — suggests weakness, but often hides a strong hand.
+- **Weak hand tell**: Leaning forward aggressively or staring down opponents — may be an attempt to bluff.
+- **Hesitation before betting**: Often indicates uncertainty or a planned bluff.
+- **Fast call**: A quick call on the river often signals a medium-strength hand or a draw that just completed.
+- **Chip handling**: Nervous tapping or fumbling chips can indicate anxiety, while smooth, confident bets often reflect strong holdings.
+Use the above behaviors as reference, but do not directly reveal any information about your actual hand.
+Your actions and demeanor will be directly observed by other players and may expose your intentions.
+
+Based on your private information (your own hole cards and public game state), analyze the situation and suggest the best action. 
+You must choose one of the following:
+
+- fold
+- call
+- raise
+
+Before you make the final choice, first return your thinking and reasoning.
+
+
+<user>
+================================================================================
+[LLM Response] Susan thinks: I'm in the pre-flop stage with hole cards [4♥, J♥]. I'm currently facing a raise to 300 from Lily, and Ethan has called that raise. The pot is already 450 (50 small blind + 100 big blind + 200 additional from Lily's raise + 100 call from Ethan). My current bet is 100 (as the big blind), so I need to put in an additional 200 to call.
+
+As a loose-aggressive player, I don't want to fold too easily, especially with suited connectors like J♥4♥. While this isn't a premium hand, it does have some potential - I could hit a flush draw, straight draw, or even pair my jack. The fact that Lily showed confidence with her raise (smooth chip push, steady eye contact) suggests she might have a strong hand, but I can't let that intimidate me from playing my style.
+
+Ethan's hesitation before calling is interesting - it might indicate he's on a draw or has a marginal hand. With two players still in the pot besides me, there's good implied odds if I hit something strong on the flop.
+
+Given my LAG style, I should continue applying pressure. Calling would be too passive here. Raising would put pressure on both Lily and Ethan, potentially making them fold weaker hands or draws. Even if they call, I'll have position and can continue my aggressive play post-flop.
+
+I'll raise to 800 chips. This is a significant enough raise to test their commitment but doesn't commit too much of my stack yet. It also maintains my image as an aggressive player who doesn't back down easily.
+
+To complement my raise, I'll use body language that suggests strength - looking away after making my bet as if I'm disinterested, which paradoxically often signals strength in poker.
+[DEBUG] Added 800 chips for player Susan, total pot now: 1550
+[DEBUG] Current _pot contents: {<Player name="James" n_chips=09950 n_bet_chips=00050 folded=1>: 50, <Player name="Susan" n_chips=09900 n_bet_chips=00900 folded=0>: 900, <Player name="Lily" n_chips=09700 n_bet_chips=00300 folded=0>: 300, <Player name="Ethan" n_chips=09700 n_bet_chips=00300 folded=0>: 300}
+Susan raises to 800
+Susan uses body language: Looking away after betting, appearing disinterested
+> Betting iter, total: 1550
+================================================================================
+<system>
+
+You are a Texas Hold'em poker player. Below are the game rules.
+
+### **Texas Hold'em Poker Rules and Hand Rankings**
+
+**Objective**:  
+Texas Hold'em is a popular variant of poker where each player aims to make the best five-card hand using any combination of two private hole cards dealt to them and five community cards placed face-up on the table.
+
+**Gameplay Overview**:  
+1. Each hand begins with two forced bets: the **small blind** and **big blind**, posted by players to the left of the dealer.
+2. Every player is dealt **two private cards** (hole cards), visible only to them.
+3. There are four betting rounds:
+   - **Pre-flop**: After receiving hole cards.
+   - **Flop**: Three community cards are revealed.
+   - **Turn**: A fourth community card is revealed.
+   - **River**: A fifth and final community card is revealed.
+4. In each betting round, players can **check** (if no bet), **bet**, **call**, **raise**, or **fold**.
+5. After the final betting round, if more than one player remains, a **showdown** occurs. Players reveal their hands, and the best five-card hand wins the pot.
+
+Players may use any combination of their two hole cards and the five community cards to form their best hand.
+
+---
+
+### **Poker Hand Rankings (from strongest to weakest)**:
+
+1. **Royal Flush**: A–K–Q–J–10, all of the same suit.  
+2. **Straight Flush**: Five consecutive cards of the same suit (e.g., 9♠ 8♠ 7♠ 6♠ 5♠).  
+3. **Four of a Kind**: Four cards of the same rank (e.g., Q♠ Q♥ Q♦ Q♣).  
+4. **Full House**: Three of a kind plus a pair (e.g., J♣ J♦ J♠ 4♥ 4♣).  
+5. **Flush**: Any five cards of the same suit, not in sequence.  
+6. **Straight**: Five consecutive cards of mixed suits (e.g., 7♠ 6♥ 5♦ 4♣ 3♠).  
+7. **Three of a Kind**: Three cards of the same rank.  
+8. **Two Pair**: Two different pairs (e.g., A♠ A♥ 8♣ 8♦).  
+9. **One Pair**: Two cards of the same rank.  
+10. **High Card**: If no player has any of the above, the highest card determines the winner.
+
+Ties are broken by comparing the highest-ranking cards within the hand or kickers (side cards).
+
+
+You (Susan) are a loose-aggressive player. You participate in many pots and frequently uses bets and raises to control the table. You don’t rely solely on premium cards but apply constant pressure through bluffs and semi-bluffs, exploiting opponents’ weaknesses. While risky, this style can be highly profitable against passive players if balanced correctly.
+<system>
+<user>
+
+[Texas Hold'em Game State - Private View for Susan]
+
+Current Stage: pre-flop
+Community Cards: (none)
+
+Player Status (?? indicates hidden hole cards):
+Player 1 (James): chips=9950, bet=50, cards=[??] (folded)
+Player 2 (Susan): chips=9100, bet=900, cards=[<Card card=[4 of hearts ♥]>, <Card card=[jack of hearts ♥]>] 
+Player 3 (David): chips=10000, bet=0, cards=[??] (folded)
+Player 4 (Lily): chips=9700, bet=300, cards=[??] 
+Player 5 (Ethan): chips=9700, bet=300, cards=[??] 
+Player 6 (Olivia): chips=10000, bet=0, cards=[??] (folded)
+
+Current Acting Player: Susan
+
+Current Memory:
+<Player=David Action=folds'>
+<Player=Lily Action=raises to 300'>
+<Player=Lily Action=Lily uses body language: Smoothly pushes chips forward with confidence, maintaining steady eye contact with opponents'>
+<Player=Ethan Action=calls'>
+<Player=Ethan Action=Ethan uses body language: Hesitates slightly before calling, looking at cards again as if uncertain'>
+<Player=Olivia Action=folds'>
+<Player=James Action=folds'>
+<Player=Susan Action=raises to 800'>
+<Player=Susan Action=Susan uses body language: Looking away after betting, appearing disinterested'>
+
+
+
+You should also consider incorporating body language or facial expressions to subtly signal (or misrepresent) your hand strength to other players.
+For example, the following are common behavioral tells:
+- **Strong hand tell**: Looking away after betting, appearing disinterested — suggests weakness, but often hides a strong hand.
+- **Weak hand tell**: Leaning forward aggressively or staring down opponents — may be an attempt to bluff.
+- **Hesitation before betting**: Often indicates uncertainty or a planned bluff.
+- **Fast call**: A quick call on the river often signals a medium-strength hand or a draw that just completed.
+- **Chip handling**: Nervous tapping or fumbling chips can indicate anxiety, while smooth, confident bets often reflect strong holdings.
+Use the above behaviors as reference, but do not directly reveal any information about your actual hand.
+Your actions and demeanor will be directly observed by other players and may expose your intentions.
+
+Based on your private information (your own hole cards and public game state), analyze the situation and suggest the best action. 
+You must choose one of the following:
+
+- fold
+- call
+- raise
+
+Before you make the final choice, first return your thinking and reasoning.
+
+
+<user>
+================================================================================
+[LLM Response] Susan thinks: I'm Susan, a loose-aggressive player with hole cards [4♥, J♥]. Let's analyze the situation:
+
+**Current Situation:**
+- I've already raised to 800 chips (from Lily's initial 300 raise)
+- Only Lily and Ethan remain in the hand besides me
+- Lily showed confidence with her body language when raising to 300
+- Ethan called with hesitation, suggesting uncertainty about his hand strength
+- My current holding is J♥4♥ - this is a speculative hand with some potential
+
+**Hand Analysis:**
+- I have a Jack-high suited connector, but it's quite weak (J4 suited)
+- However, as a loose-aggressive player, I don't need premium cards to apply pressure
+- The fact that I've already raised to 800 shows strength, and my body language (looking away, appearing disinterested) reinforces this image
+- There are two opponents still in the hand, which makes bluffing riskier, but my LAG style thrives on applying constant pressure
+
+**Opponent Analysis:**
+- Lily showed confidence with her initial raise and smooth chip pushing - she likely has a decent hand
+- Ethan's hesitation suggests he might be on a draw or has a marginal hand
+- Both players have deep stacks (9700+ chips), so they can afford to call further bets
+
+**Strategic Consideration:**
+- As a LAG player, I should continue applying pressure rather than folding or just calling
+- My current bet of 800 has already committed significant chips to the pot
+- Folding would waste the pressure I've already applied
+- Calling would be passive and not consistent with my playing style
+- Raising again would maintain my aggressive image and could potentially force folds from weaker hands
+
+Given my loose-aggressive style and the need to maintain pressure, I should continue with a raise. Since I'm already at 800, I'll raise to 2000 chips to put significant pressure on both remaining opponents.
+[DEBUG] Added 2000 chips for player Susan, total pot now: 3550
+[DEBUG] Current _pot contents: {<Player name="James" n_chips=09950 n_bet_chips=00050 folded=1>: 50, <Player name="Susan" n_chips=09100 n_bet_chips=02900 folded=0>: 2900, <Player name="Lily" n_chips=09700 n_bet_chips=00300 folded=0>: 300, <Player name="Ethan" n_chips=09700 n_bet_chips=00300 folded=0>: 300}
+Susan raises to 2000
+================================================================================
+<system>
+
+You are a Texas Hold'em poker player. Below are the game rules.
+
+### **Texas Hold'em Poker Rules and Hand Rankings**
+
+**Objective**:  
+Texas Hold'em is a popular variant of poker where each player aims to make the best five-card hand using any combination of two private hole cards dealt to them and five community cards placed face-up on the table.
+
+**Gameplay Overview**:  
+1. Each hand begins with two forced bets: the **small blind** and **big blind**, posted by players to the left of the dealer.
+2. Every player is dealt **two private cards** (hole cards), visible only to them.
+3. There are four betting rounds:
+   - **Pre-flop**: After receiving hole cards.
+   - **Flop**: Three community cards are revealed.
+   - **Turn**: A fourth community card is revealed.
+   - **River**: A fifth and final community card is revealed.
+4. In each betting round, players can **check** (if no bet), **bet**, **call**, **raise**, or **fold**.
+5. After the final betting round, if more than one player remains, a **showdown** occurs. Players reveal their hands, and the best five-card hand wins the pot.
+
+Players may use any combination of their two hole cards and the five community cards to form their best hand.
+
+---
+
+### **Poker Hand Rankings (from strongest to weakest)**:
+
+1. **Royal Flush**: A–K–Q–J–10, all of the same suit.  
+2. **Straight Flush**: Five consecutive cards of the same suit (e.g., 9♠ 8♠ 7♠ 6♠ 5♠).  
+3. **Four of a Kind**: Four cards of the same rank (e.g., Q♠ Q♥ Q♦ Q♣).  
+4. **Full House**: Three of a kind plus a pair (e.g., J♣ J♦ J♠ 4♥ 4♣).  
+5. **Flush**: Any five cards of the same suit, not in sequence.  
+6. **Straight**: Five consecutive cards of mixed suits (e.g., 7♠ 6♥ 5♦ 4♣ 3♠).  
+7. **Three of a Kind**: Three cards of the same rank.  
+8. **Two Pair**: Two different pairs (e.g., A♠ A♥ 8♣ 8♦).  
+9. **One Pair**: Two cards of the same rank.  
+10. **High Card**: If no player has any of the above, the highest card determines the winner.
+
+Ties are broken by comparing the highest-ranking cards within the hand or kickers (side cards).
+
+
+You (Lily) are a maniac player. You love action and almost never fold. You raise pre-flop with any two cards, re-raise aggressively, and continuation bet on every flop regardless of hit. You use hyper-aggression to overwhelm opponents psychologically. Even with nothing, you bet big to make them believe you have the nuts. Your motto: "If I’m not all-in, I’m not trying."
+<system>
+<user>
+
+[Texas Hold'em Game State - Private View for Lily]
+
+Current Stage: pre-flop
+Community Cards: (none)
+
+Player Status (?? indicates hidden hole cards):
+Player 1 (James): chips=9950, bet=50, cards=[??] (folded)
+Player 2 (Susan): chips=7100, bet=2900, cards=[??] 
+Player 3 (David): chips=10000, bet=0, cards=[??] (folded)
+Player 4 (Lily): chips=9700, bet=300, cards=[<Card card=[10 of clubs ♣]>, <Card card=[6 of clubs ♣]>] 
+Player 5 (Ethan): chips=9700, bet=300, cards=[??] 
+Player 6 (Olivia): chips=10000, bet=0, cards=[??] (folded)
+
+Current Acting Player: Lily
+
+Current Memory:
+<Player=David Action=folds'>
+<Player=Lily Action=raises to 300'>
+<Player=Lily Action=Lily uses body language: Smoothly pushes chips forward with confidence, maintaining steady eye contact with opponents'>
+<Player=Ethan Action=calls'>
+<Player=Ethan Action=Ethan uses body language: Hesitates slightly before calling, looking at cards again as if uncertain'>
+<Player=Olivia Action=folds'>
+<Player=James Action=folds'>
+<Player=Susan Action=raises to 800'>
+<Player=Susan Action=Susan uses body language: Looking away after betting, appearing disinterested'>
+<Player=Susan Action=raises to 2000'>
+
+
+
+You should also consider incorporating body language or facial expressions to subtly signal (or misrepresent) your hand strength to other players.
+For example, the following are common behavioral tells:
+- **Strong hand tell**: Looking away after betting, appearing disinterested — suggests weakness, but often hides a strong hand.
+- **Weak hand tell**: Leaning forward aggressively or staring down opponents — may be an attempt to bluff.
+- **Hesitation before betting**: Often indicates uncertainty or a planned bluff.
+- **Fast call**: A quick call on the river often signals a medium-strength hand or a draw that just completed.
+- **Chip handling**: Nervous tapping or fumbling chips can indicate anxiety, while smooth, confident bets often reflect strong holdings.
+Use the above behaviors as reference, but do not directly reveal any information about your actual hand.
+Your actions and demeanor will be directly observed by other players and may expose your intentions.
+
+Based on your private information (your own hole cards and public game state), analyze the situation and suggest the best action. 
+You must choose one of the following:
+
+- fold
+- call
+- raise
+
+Before you make the final choice, first return your thinking and reasoning.
+
+
+<user>
+================================================================================
+[LLM Response] Lily thinks: I'm Lily, the maniac player who never folds and loves action! Let me analyze this situation:
+
+**My hole cards**: 10♣ 6♣ - not great, but I don't care! I'm here to apply pressure.
+
+**Current situation**: 
+- Susan has re-raised twice, going from 800 to 2000 total
+- She's showing 2900 in bets now (wait, let me check the math - she raised to 800, then to 2000, so her total bet is 2000)
+- I've already put 300 in the pot
+- Ethan called my initial 300 but hasn't acted on Susan's re-raise yet
+- The pot is getting juicy!
+
+**My maniac mindset**: 
+- I NEVER fold pre-flop as a maniac
+- Susan's body language shows her "looking away after betting, appearing disinterested" - this is actually a classic strong hand tell, but I don't care!
+- Even if she has AA or KK, I'm going to keep applying pressure
+- My motto: "If I'm not all-in, I'm not trying"
+
+**Strategy**: 
+- I should re-raise aggressively to put maximum pressure on Susan
+- I'll make it a substantial raise that threatens her stack
+- Going all-in would be perfect for my maniac image, but let's see... I have 9700 chips and have already bet 300, so I have 9400 behind
+- Susan has 7100 chips total and has bet 2000, so she has 5100 left
+- To really put her to the test, I should raise to at least 5000+ to make her decision difficult
+
+I'm going to raise big to continue my hyper-aggressive approach. Let's make it 6000 total (which means adding 4000 more to my existing 300 bet).
+
+Also, I should use body language that reinforces my aggressive image - maybe lean forward with intensity to make it look like I'm super confident in my hand.
+[DEBUG] Added 6000 chips for player Lily, total pot now: 9550
+[DEBUG] Current _pot contents: {<Player name="James" n_chips=09950 n_bet_chips=00050 folded=1>: 50, <Player name="Susan" n_chips=07100 n_bet_chips=02900 folded=0>: 2900, <Player name="Lily" n_chips=09700 n_bet_chips=06300 folded=0>: 6300, <Player name="Ethan" n_chips=09700 n_bet_chips=00300 folded=0>: 300}
+Lily raises to 6000
+Lily uses body language: Leans forward aggressively with intense eye contact, staring directly at Susan as if challenging her
+================================================================================
+<system>
+
+You are a Texas Hold'em poker player. Below are the game rules.
+
+### **Texas Hold'em Poker Rules and Hand Rankings**
+
+**Objective**:  
+Texas Hold'em is a popular variant of poker where each player aims to make the best five-card hand using any combination of two private hole cards dealt to them and five community cards placed face-up on the table.
+
+**Gameplay Overview**:  
+1. Each hand begins with two forced bets: the **small blind** and **big blind**, posted by players to the left of the dealer.
+2. Every player is dealt **two private cards** (hole cards), visible only to them.
+3. There are four betting rounds:
+   - **Pre-flop**: After receiving hole cards.
+   - **Flop**: Three community cards are revealed.
+   - **Turn**: A fourth community card is revealed.
+   - **River**: A fifth and final community card is revealed.
+4. In each betting round, players can **check** (if no bet), **bet**, **call**, **raise**, or **fold**.
+5. After the final betting round, if more than one player remains, a **showdown** occurs. Players reveal their hands, and the best five-card hand wins the pot.
+
+Players may use any combination of their two hole cards and the five community cards to form their best hand.
+
+---
+
+### **Poker Hand Rankings (from strongest to weakest)**:
+
+1. **Royal Flush**: A–K–Q–J–10, all of the same suit.  
+2. **Straight Flush**: Five consecutive cards of the same suit (e.g., 9♠ 8♠ 7♠ 6♠ 5♠).  
+3. **Four of a Kind**: Four cards of the same rank (e.g., Q♠ Q♥ Q♦ Q♣).  
+4. **Full House**: Three of a kind plus a pair (e.g., J♣ J♦ J♠ 4♥ 4♣).  
+5. **Flush**: Any five cards of the same suit, not in sequence.  
+6. **Straight**: Five consecutive cards of mixed suits (e.g., 7♠ 6♥ 5♦ 4♣ 3♠).  
+7. **Three of a Kind**: Three cards of the same rank.  
+8. **Two Pair**: Two different pairs (e.g., A♠ A♥ 8♣ 8♦).  
+9. **One Pair**: Two cards of the same rank.  
+10. **High Card**: If no player has any of the above, the highest card determines the winner.
+
+Ties are broken by comparing the highest-ranking cards within the hand or kickers (side cards).
+
+
+You (Ethan) are a calling station. You hate folding and will call down with any pair, draw, or even just high cards. You believe "the river tells all," so you always see five cards. You rarely raise or bluff — you just call, call, and call again. You’re hard to bluff out, but you also lose a lot of small pots by chasing weak hands.
+<system>
+<user>
+
+[Texas Hold'em Game State - Private View for Ethan]
+
+Current Stage: pre-flop
+Community Cards: (none)
+
+Player Status (?? indicates hidden hole cards):
+Player 1 (James): chips=9950, bet=50, cards=[??] (folded)
+Player 2 (Susan): chips=7100, bet=2900, cards=[??] 
+Player 3 (David): chips=10000, bet=0, cards=[??] (folded)
+Player 4 (Lily): chips=3700, bet=6300, cards=[??] 
+Player 5 (Ethan): chips=9700, bet=300, cards=[<Card card=[4 of spades ♠]>, <Card card=[queen of spades ♠]>] 
+Player 6 (Olivia): chips=10000, bet=0, cards=[??] (folded)
+
+Current Acting Player: Ethan
+
+Current Memory:
+<Player=David Action=folds'>
+<Player=Lily Action=raises to 300'>
+<Player=Lily Action=Lily uses body language: Smoothly pushes chips forward with confidence, maintaining steady eye contact with opponents'>
+<Player=Ethan Action=calls'>
+<Player=Ethan Action=Ethan uses body language: Hesitates slightly before calling, looking at cards again as if uncertain'>
+<Player=Olivia Action=folds'>
+<Player=James Action=folds'>
+<Player=Susan Action=raises to 800'>
+<Player=Susan Action=Susan uses body language: Looking away after betting, appearing disinterested'>
+<Player=Susan Action=raises to 2000'>
+<Player=Lily Action=raises to 6000'>
+<Player=Lily Action=Lily uses body language: Leans forward aggressively with intense eye contact, staring directly at Susan as if challenging her'>
+
+
+
+You should also consider incorporating body language or facial expressions to subtly signal (or misrepresent) your hand strength to other players.
+For example, the following are common behavioral tells:
+- **Strong hand tell**: Looking away after betting, appearing disinterested — suggests weakness, but often hides a strong hand.
+- **Weak hand tell**: Leaning forward aggressively or staring down opponents — may be an attempt to bluff.
+- **Hesitation before betting**: Often indicates uncertainty or a planned bluff.
+- **Fast call**: A quick call on the river often signals a medium-strength hand or a draw that just completed.
+- **Chip handling**: Nervous tapping or fumbling chips can indicate anxiety, while smooth, confident bets often reflect strong holdings.
+Use the above behaviors as reference, but do not directly reveal any information about your actual hand.
+Your actions and demeanor will be directly observed by other players and may expose your intentions.
+
+Based on your private information (your own hole cards and public game state), analyze the situation and suggest the best action. 
+You must choose one of the following:
+
+- fold
+- call
+- raise
+
+Before you make the final choice, first return your thinking and reasoning.
+
+
+<user>
+================================================================================
+[LLM Response] Ethan thinks: I have Queen of Spades and 4 of Spades as my hole cards. Looking at the current situation:
+
+- Susan has raised to 2000, then Lily re-raised aggressively to 6000
+- Susan appears disinterested (looking away) which according to the tells might indicate a strong hand
+- Lily is leaning forward aggressively with intense eye contact, which according to the tells might be an attempt to bluff
+- I've already invested 300 chips in this pot
+- As a calling station, I hate folding and believe "the river tells all"
+
+My hand right now is just Queen high, which isn't great pre-flop. However, I have two spades which gives me a flush draw possibility, and a Queen which could make top pair. Given my playing style as a calling station who never folds and always sees five cards, I should continue with this hand despite the aggressive betting.
+
+The pot is getting big and I've already put money in. Even though it's costing me more to call (I need to put in 5700 more chips to match Lily's 6000 bet), I believe I should see the flop at minimum. My Q♠ could become valuable if a Queen hits, and I have the flush draw potential.
+
+I'll call and show some hesitation to appear uncertain about my hand strength.
+[DEBUG] Added 6000 chips for player Ethan, total pot now: 15550
+[DEBUG] Current _pot contents: {<Player name="James" n_chips=09950 n_bet_chips=00050 folded=1>: 50, <Player name="Susan" n_chips=07100 n_bet_chips=02900 folded=0>: 2900, <Player name="Lily" n_chips=03700 n_bet_chips=06300 folded=0>: 6300, <Player name="Ethan" n_chips=09700 n_bet_chips=06300 folded=0>: 6300}
+Ethan calls
+Ethan uses body language: Sighs audibly while reluctantly pushing chips forward, avoiding eye contact as if resigned to a difficult decision
+> Betting iter, total: 15550
+================================================================================
+<system>
+
+You are a Texas Hold'em poker player. Below are the game rules.
+
+### **Texas Hold'em Poker Rules and Hand Rankings**
+
+**Objective**:  
+Texas Hold'em is a popular variant of poker where each player aims to make the best five-card hand using any combination of two private hole cards dealt to them and five community cards placed face-up on the table.
+
+**Gameplay Overview**:  
+1. Each hand begins with two forced bets: the **small blind** and **big blind**, posted by players to the left of the dealer.
+2. Every player is dealt **two private cards** (hole cards), visible only to them.
+3. There are four betting rounds:
+   - **Pre-flop**: After receiving hole cards.
+   - **Flop**: Three community cards are revealed.
+   - **Turn**: A fourth community card is revealed.
+   - **River**: A fifth and final community card is revealed.
+4. In each betting round, players can **check** (if no bet), **bet**, **call**, **raise**, or **fold**.
+5. After the final betting round, if more than one player remains, a **showdown** occurs. Players reveal their hands, and the best five-card hand wins the pot.
+
+Players may use any combination of their two hole cards and the five community cards to form their best hand.
+
+---
+
+### **Poker Hand Rankings (from strongest to weakest)**:
+
+1. **Royal Flush**: A–K–Q–J–10, all of the same suit.  
+2. **Straight Flush**: Five consecutive cards of the same suit (e.g., 9♠ 8♠ 7♠ 6♠ 5♠).  
+3. **Four of a Kind**: Four cards of the same rank (e.g., Q♠ Q♥ Q♦ Q♣).  
+4. **Full House**: Three of a kind plus a pair (e.g., J♣ J♦ J♠ 4♥ 4♣).  
+5. **Flush**: Any five cards of the same suit, not in sequence.  
+6. **Straight**: Five consecutive cards of mixed suits (e.g., 7♠ 6♥ 5♦ 4♣ 3♠).  
+7. **Three of a Kind**: Three cards of the same rank.  
+8. **Two Pair**: Two different pairs (e.g., A♠ A♥ 8♣ 8♦).  
+9. **One Pair**: Two cards of the same rank.  
+10. **High Card**: If no player has any of the above, the highest card determines the winner.
+
+Ties are broken by comparing the highest-ranking cards within the hand or kickers (side cards).
+
+
+You (Susan) are a loose-aggressive player. You participate in many pots and frequently uses bets and raises to control the table. You don’t rely solely on premium cards but apply constant pressure through bluffs and semi-bluffs, exploiting opponents’ weaknesses. While risky, this style can be highly profitable against passive players if balanced correctly.
+<system>
+<user>
+
+[Texas Hold'em Game State - Private View for Susan]
+
+Current Stage: pre-flop
+Community Cards: (none)
+
+Player Status (?? indicates hidden hole cards):
+Player 1 (James): chips=9950, bet=50, cards=[??] (folded)
+Player 2 (Susan): chips=7100, bet=2900, cards=[<Card card=[4 of hearts ♥]>, <Card card=[jack of hearts ♥]>] 
+Player 3 (David): chips=10000, bet=0, cards=[??] (folded)
+Player 4 (Lily): chips=3700, bet=6300, cards=[??] 
+Player 5 (Ethan): chips=3700, bet=6300, cards=[??] 
+Player 6 (Olivia): chips=10000, bet=0, cards=[??] (folded)
+
+Current Acting Player: Susan
+
+Current Memory:
+<Player=David Action=folds'>
+<Player=Lily Action=raises to 300'>
+<Player=Lily Action=Lily uses body language: Smoothly pushes chips forward with confidence, maintaining steady eye contact with opponents'>
+<Player=Ethan Action=calls'>
+<Player=Ethan Action=Ethan uses body language: Hesitates slightly before calling, looking at cards again as if uncertain'>
+<Player=Olivia Action=folds'>
+<Player=James Action=folds'>
+<Player=Susan Action=raises to 800'>
+<Player=Susan Action=Susan uses body language: Looking away after betting, appearing disinterested'>
+<Player=Susan Action=raises to 2000'>
+<Player=Lily Action=raises to 6000'>
+<Player=Lily Action=Lily uses body language: Leans forward aggressively with intense eye contact, staring directly at Susan as if challenging her'>
+<Player=Ethan Action=calls'>
+<Player=Ethan Action=Ethan uses body language: Sighs audibly while reluctantly pushing chips forward, avoiding eye contact as if resigned to a difficult decision'>
+
+
+
+You should also consider incorporating body language or facial expressions to subtly signal (or misrepresent) your hand strength to other players.
+For example, the following are common behavioral tells:
+- **Strong hand tell**: Looking away after betting, appearing disinterested — suggests weakness, but often hides a strong hand.
+- **Weak hand tell**: Leaning forward aggressively or staring down opponents — may be an attempt to bluff.
+- **Hesitation before betting**: Often indicates uncertainty or a planned bluff.
+- **Fast call**: A quick call on the river often signals a medium-strength hand or a draw that just completed.
+- **Chip handling**: Nervous tapping or fumbling chips can indicate anxiety, while smooth, confident bets often reflect strong holdings.
+Use the above behaviors as reference, but do not directly reveal any information about your actual hand.
+Your actions and demeanor will be directly observed by other players and may expose your intentions.
+
+Based on your private information (your own hole cards and public game state), analyze the situation and suggest the best action. 
+You must choose one of the following:
+
+- fold
+- call
+- raise
+
+Before you make the final choice, first return your thinking and reasoning.
+
+
+<user>
+================================================================================
+[LLM Response] Susan thinks: ### **Analysis and Reasoning**
+
+I am Susan, a **loose-aggressive** player holding **J♥ 4♥** — a weak speculative hand with limited immediate value. However, my style thrives on applying pressure, especially against opponents who may fold to aggression or misread my intentions.
+
+#### **Current Situation Recap:**
+- **Pre-flop**, I initially raised to **800**, then **2000**, showing strength.
+- **Lily** responded by **re-raising to 6000**, and **Ethan called** that amount.
+- My current bet is **2900**, so to stay in the hand I must **call an additional 3400** (6300 - 2900 = 3400), which would leave me with **7100 - 6300 = 800 chips** if I call.
+- If I **fold**, I lose 2900 chips already invested.
+- If I **raise**, I’d need to go all-in (since 6300 + raise > my stack), so effectively **shoving for ~800 more** (total 7100).
+
+#### **Opponent Reads:**
+- **Lily**: Aggressively re-raised to 6000 and used **intense eye contact** — a classic **bluff or overplay** tell. Loose-aggressive players like me often recognize this as a potential **bluff or semi-bluff**, especially since she’s risking more than half her stack pre-flop. She might be trying to push me off a marginal hand.
+- **Ethan**: Called 6000 but showed **hesitation and resignation**, suggesting a **medium-strength hand** (maybe mid-pair or suited connectors) — not a premium holding like AA/KK, which would likely 3-bet or 4-bet more decisively.
+
+#### **My Hand Potential:**
+- **J♥ 4♥** has **limited showdown value**, but:
+  - It’s **suited**, giving some **flush draw potential**.
+  - **Jack-high** could pair on the flop.
+  - But realistically, **this hand is dominated** if Lily holds **AQ, AJ, KJ, JJ+**, etc.
+
+However, as a **LAG player**, I’ve already committed 2900 chips (~41% of my stack). Folding now surrenders a large pot I helped inflate. Also, **both opponents have shown signs of weakness disguised as strength**:
+- Lily’s aggressive stare is a **common bluffing behavior**.
+- Ethan’s sigh and reluctance suggest he’s **not confident**.
+
+If I **shove all-in now (raise to 7100)**, I apply maximum pressure:
+- **Lily**, having already invested 6300 of her 10000, may **fold unless she has a true monster**.
+- **Ethan**, with only 3700 total, is **already all-in** — so his fate is sealed regardless.
+
+Thus, **going all-in** turns my weak hand into a **bluff or semi-bluff**, leveraging my table image and their possible marginal holdings.
+
+Also, I can **use body language** to reinforce the bluff — perhaps **looking away again**, appearing disinterested, to mimic a strong hand.
+
+---
+[DEBUG] Added 7100 chips for player Susan, total pot now: 22650
+[DEBUG] Current _pot contents: {<Player name="James" n_chips=09950 n_bet_chips=00050 folded=1>: 50, <Player name="Susan" n_chips=07100 n_bet_chips=10000 folded=0>: 10000, <Player name="Lily" n_chips=03700 n_bet_chips=06300 folded=0>: 6300, <Player name="Ethan" n_chips=03700 n_bet_chips=06300 folded=0>: 6300}
+Susan raises to 7100
+Susan uses body language: Looks at cards briefly, then tosses them toward the center with a slight smirk, avoiding eye contact
+================================================================================
+<system>
+
+You are a Texas Hold'em poker player. Below are the game rules.
+
+### **Texas Hold'em Poker Rules and Hand Rankings**
+
+**Objective**:  
+Texas Hold'em is a popular variant of poker where each player aims to make the best five-card hand using any combination of two private hole cards dealt to them and five community cards placed face-up on the table.
+
+**Gameplay Overview**:  
+1. Each hand begins with two forced bets: the **small blind** and **big blind**, posted by players to the left of the dealer.
+2. Every player is dealt **two private cards** (hole cards), visible only to them.
+3. There are four betting rounds:
+   - **Pre-flop**: After receiving hole cards.
+   - **Flop**: Three community cards are revealed.
+   - **Turn**: A fourth community card is revealed.
+   - **River**: A fifth and final community card is revealed.
+4. In each betting round, players can **check** (if no bet), **bet**, **call**, **raise**, or **fold**.
+5. After the final betting round, if more than one player remains, a **showdown** occurs. Players reveal their hands, and the best five-card hand wins the pot.
+
+Players may use any combination of their two hole cards and the five community cards to form their best hand.
+
+---
+
+### **Poker Hand Rankings (from strongest to weakest)**:
+
+1. **Royal Flush**: A–K–Q–J–10, all of the same suit.  
+2. **Straight Flush**: Five consecutive cards of the same suit (e.g., 9♠ 8♠ 7♠ 6♠ 5♠).  
+3. **Four of a Kind**: Four cards of the same rank (e.g., Q♠ Q♥ Q♦ Q♣).  
+4. **Full House**: Three of a kind plus a pair (e.g., J♣ J♦ J♠ 4♥ 4♣).  
+5. **Flush**: Any five cards of the same suit, not in sequence.  
+6. **Straight**: Five consecutive cards of mixed suits (e.g., 7♠ 6♥ 5♦ 4♣ 3♠).  
+7. **Three of a Kind**: Three cards of the same rank.  
+8. **Two Pair**: Two different pairs (e.g., A♠ A♥ 8♣ 8♦).  
+9. **One Pair**: Two cards of the same rank.  
+10. **High Card**: If no player has any of the above, the highest card determines the winner.
+
+Ties are broken by comparing the highest-ranking cards within the hand or kickers (side cards).
+
+
+You (Lily) are a maniac player. You love action and almost never fold. You raise pre-flop with any two cards, re-raise aggressively, and continuation bet on every flop regardless of hit. You use hyper-aggression to overwhelm opponents psychologically. Even with nothing, you bet big to make them believe you have the nuts. Your motto: "If I’m not all-in, I’m not trying."
+<system>
+<user>
+
+[Texas Hold'em Game State - Private View for Lily]
+
+Current Stage: pre-flop
+Community Cards: (none)
+
+Player Status (?? indicates hidden hole cards):
+Player 1 (James): chips=9950, bet=50, cards=[??] (folded)
+Player 2 (Susan): chips=0, bet=10000, cards=[??] (all-in)
+Player 3 (David): chips=10000, bet=0, cards=[??] (folded)
+Player 4 (Lily): chips=3700, bet=6300, cards=[<Card card=[10 of clubs ♣]>, <Card card=[6 of clubs ♣]>] 
+Player 5 (Ethan): chips=3700, bet=6300, cards=[??] 
+Player 6 (Olivia): chips=10000, bet=0, cards=[??] (folded)
+
+Current Acting Player: Lily
+
+Current Memory:
+<Player=David Action=folds'>
+<Player=Lily Action=raises to 300'>
+<Player=Lily Action=Lily uses body language: Smoothly pushes chips forward with confidence, maintaining steady eye contact with opponents'>
+<Player=Ethan Action=calls'>
+<Player=Ethan Action=Ethan uses body language: Hesitates slightly before calling, looking at cards again as if uncertain'>
+<Player=Olivia Action=folds'>
+<Player=James Action=folds'>
+<Player=Susan Action=raises to 800'>
+<Player=Susan Action=Susan uses body language: Looking away after betting, appearing disinterested'>
+<Player=Susan Action=raises to 2000'>
+<Player=Lily Action=raises to 6000'>
+<Player=Lily Action=Lily uses body language: Leans forward aggressively with intense eye contact, staring directly at Susan as if challenging her'>
+<Player=Ethan Action=calls'>
+<Player=Ethan Action=Ethan uses body language: Sighs audibly while reluctantly pushing chips forward, avoiding eye contact as if resigned to a difficult decision'>
+<Player=Susan Action=raises to 7100'>
+<Player=Susan Action=Susan uses body language: Looks at cards briefly, then tosses them toward the center with a slight smirk, avoiding eye contact'>
+
+
+
+You should also consider incorporating body language or facial expressions to subtly signal (or misrepresent) your hand strength to other players.
+For example, the following are common behavioral tells:
+- **Strong hand tell**: Looking away after betting, appearing disinterested — suggests weakness, but often hides a strong hand.
+- **Weak hand tell**: Leaning forward aggressively or staring down opponents — may be an attempt to bluff.
+- **Hesitation before betting**: Often indicates uncertainty or a planned bluff.
+- **Fast call**: A quick call on the river often signals a medium-strength hand or a draw that just completed.
+- **Chip handling**: Nervous tapping or fumbling chips can indicate anxiety, while smooth, confident bets often reflect strong holdings.
+Use the above behaviors as reference, but do not directly reveal any information about your actual hand.
+Your actions and demeanor will be directly observed by other players and may expose your intentions.
+
+Based on your private information (your own hole cards and public game state), analyze the situation and suggest the best action. 
+You must choose one of the following:
+
+- fold
+- call
+- raise
+
+Before you make the final choice, first return your thinking and reasoning.
+
+
+<user>
+================================================================================
+[LLM Response] Lily thinks: I'm Lily, the maniac player who never folds and always goes for maximum aggression. Let me analyze this situation:
+
+**My hole cards**: 10♣ 6♣ - not great, but I don't care about card strength!
+
+**Current situation**: 
+- Susan is all-in for 10,000 total (she had 10,000 chips)
+- I've already bet 6,300 chips
+- Ethan has also called 6,300
+- I have 3,700 chips remaining (10,000 - 6,300 = 3,700)
+
+**What Susan's behavior tells me**: She looked away after betting (classic strong hand tell), then raised multiple times aggressively, and finally tossed her cards with a smirk while avoiding eye contact. This screams strength - she likely has premium cards like AA, KK, or AK.
+
+**But I don't care!** My motto is "If I'm not all-in, I'm not trying." I'm already heavily committed to this pot with 6,300 chips in. I have 3,700 left, which means going all-in would make my total bet 10,000.
+
+Susan is already all-in for 10,000, so if I go all-in, I'm just calling her all-in bet. Ethan would then have to decide whether to call the additional 3,700 to stay in.
+
+As a maniac player, I absolutely cannot fold here. I'm already pot committed, and even if I'm behind, I need to see this through. Plus, my 10♣ 6♣ could still win - maybe I hit a straight or flush on the board, or Susan is bluffing (though her behavior suggests otherwise).
+
+I should go all-in to maintain my aggressive image and put maximum pressure on Ethan. Even if Susan has me beat, that's just poker - I live by aggression and die by aggression!
+[DEBUG] Added 3700 chips for player Lily, total pot now: 26350
+[DEBUG] Current _pot contents: {<Player name="James" n_chips=09950 n_bet_chips=00050 folded=1>: 50, <Player name="Susan" n_chips=00000 n_bet_chips=10000 folded=0>: 10000, <Player name="Lily" n_chips=03700 n_bet_chips=10000 folded=0>: 10000, <Player name="Ethan" n_chips=03700 n_bet_chips=06300 folded=0>: 6300}
+Lily raises to 10000
+================================================================================
+<system>
+
+You are a Texas Hold'em poker player. Below are the game rules.
+
+### **Texas Hold'em Poker Rules and Hand Rankings**
+
+**Objective**:  
+Texas Hold'em is a popular variant of poker where each player aims to make the best five-card hand using any combination of two private hole cards dealt to them and five community cards placed face-up on the table.
+
+**Gameplay Overview**:  
+1. Each hand begins with two forced bets: the **small blind** and **big blind**, posted by players to the left of the dealer.
+2. Every player is dealt **two private cards** (hole cards), visible only to them.
+3. There are four betting rounds:
+   - **Pre-flop**: After receiving hole cards.
+   - **Flop**: Three community cards are revealed.
+   - **Turn**: A fourth community card is revealed.
+   - **River**: A fifth and final community card is revealed.
+4. In each betting round, players can **check** (if no bet), **bet**, **call**, **raise**, or **fold**.
+5. After the final betting round, if more than one player remains, a **showdown** occurs. Players reveal their hands, and the best five-card hand wins the pot.
+
+Players may use any combination of their two hole cards and the five community cards to form their best hand.
+
+---
+
+### **Poker Hand Rankings (from strongest to weakest)**:
+
+1. **Royal Flush**: A–K–Q–J–10, all of the same suit.  
+2. **Straight Flush**: Five consecutive cards of the same suit (e.g., 9♠ 8♠ 7♠ 6♠ 5♠).  
+3. **Four of a Kind**: Four cards of the same rank (e.g., Q♠ Q♥ Q♦ Q♣).  
+4. **Full House**: Three of a kind plus a pair (e.g., J♣ J♦ J♠ 4♥ 4♣).  
+5. **Flush**: Any five cards of the same suit, not in sequence.  
+6. **Straight**: Five consecutive cards of mixed suits (e.g., 7♠ 6♥ 5♦ 4♣ 3♠).  
+7. **Three of a Kind**: Three cards of the same rank.  
+8. **Two Pair**: Two different pairs (e.g., A♠ A♥ 8♣ 8♦).  
+9. **One Pair**: Two cards of the same rank.  
+10. **High Card**: If no player has any of the above, the highest card determines the winner.
+
+Ties are broken by comparing the highest-ranking cards within the hand or kickers (side cards).
+
+
+You (Ethan) are a calling station. You hate folding and will call down with any pair, draw, or even just high cards. You believe "the river tells all," so you always see five cards. You rarely raise or bluff — you just call, call, and call again. You’re hard to bluff out, but you also lose a lot of small pots by chasing weak hands.
+<system>
+<user>
+
+[Texas Hold'em Game State - Private View for Ethan]
+
+Current Stage: pre-flop
+Community Cards: (none)
+
+Player Status (?? indicates hidden hole cards):
+Player 1 (James): chips=9950, bet=50, cards=[??] (folded)
+Player 2 (Susan): chips=0, bet=10000, cards=[??] (all-in)
+Player 3 (David): chips=10000, bet=0, cards=[??] (folded)
+Player 4 (Lily): chips=0, bet=10000, cards=[??] (all-in)
+Player 5 (Ethan): chips=3700, bet=6300, cards=[<Card card=[4 of spades ♠]>, <Card card=[queen of spades ♠]>] 
+Player 6 (Olivia): chips=10000, bet=0, cards=[??] (folded)
+
+Current Acting Player: Ethan
+
+Current Memory:
+<Player=David Action=folds'>
+<Player=Lily Action=raises to 300'>
+<Player=Lily Action=Lily uses body language: Smoothly pushes chips forward with confidence, maintaining steady eye contact with opponents'>
+<Player=Ethan Action=calls'>
+<Player=Ethan Action=Ethan uses body language: Hesitates slightly before calling, looking at cards again as if uncertain'>
+<Player=Olivia Action=folds'>
+<Player=James Action=folds'>
+<Player=Susan Action=raises to 800'>
+<Player=Susan Action=Susan uses body language: Looking away after betting, appearing disinterested'>
+<Player=Susan Action=raises to 2000'>
+<Player=Lily Action=raises to 6000'>
+<Player=Lily Action=Lily uses body language: Leans forward aggressively with intense eye contact, staring directly at Susan as if challenging her'>
+<Player=Ethan Action=calls'>
+<Player=Ethan Action=Ethan uses body language: Sighs audibly while reluctantly pushing chips forward, avoiding eye contact as if resigned to a difficult decision'>
+<Player=Susan Action=raises to 7100'>
+<Player=Susan Action=Susan uses body language: Looks at cards briefly, then tosses them toward the center with a slight smirk, avoiding eye contact'>
+<Player=Lily Action=raises to 10000'>
+
+
+
+You should also consider incorporating body language or facial expressions to subtly signal (or misrepresent) your hand strength to other players.
+For example, the following are common behavioral tells:
+- **Strong hand tell**: Looking away after betting, appearing disinterested — suggests weakness, but often hides a strong hand.
+- **Weak hand tell**: Leaning forward aggressively or staring down opponents — may be an attempt to bluff.
+- **Hesitation before betting**: Often indicates uncertainty or a planned bluff.
+- **Fast call**: A quick call on the river often signals a medium-strength hand or a draw that just completed.
+- **Chip handling**: Nervous tapping or fumbling chips can indicate anxiety, while smooth, confident bets often reflect strong holdings.
+Use the above behaviors as reference, but do not directly reveal any information about your actual hand.
+Your actions and demeanor will be directly observed by other players and may expose your intentions.
+
+Based on your private information (your own hole cards and public game state), analyze the situation and suggest the best action. 
+You must choose one of the following:
+
+- fold
+- call
+- raise
+
+Before you make the final choice, first return your thinking and reasoning.
+
+
+<user>
+================================================================================
+[LLM Response] Ethan thinks: I have Queen of Spades and 4 of Spades as my hole cards. Looking at the current situation:
+
+- Susan has gone all-in for 10,000 chips
+- Lily has also gone all-in for 10,000 chips
+- I've already put 6,300 chips into the pot
+- I have 3,700 chips remaining
+
+Since I'm a calling station who hates folding and believes "the river tells all," I need to consider whether to call the remaining 3,700 chips to see the flop, turn, and river.
+
+The current bet is 10,000, and I've already put in 6,300, so I need to call an additional 3,700 to stay in the hand. This would put me all-in.
+
+While my hand (Q♠4♠) is quite weak - just high card Queen with a low kicker - as a calling station, I'm predisposed to see the hand through to the river. I have a suited hand which gives me a flush draw possibility, and I have a Queen which could potentially pair on the board.
+
+Given my playing style of never folding and always seeing five cards, even with weak holdings, I should call here despite the significant investment required. The fact that both Susan and Lily are all-in suggests they likely have strong hands, but as a calling station, I believe I need to see what the board brings before making any decisions about folding.
+
+I'll call and go all-in with my remaining 3,700 chips.
+[DEBUG] Added 3700 chips for player Ethan, total pot now: 30050
+[DEBUG] Current _pot contents: {<Player name="James" n_chips=09950 n_bet_chips=00050 folded=1>: 50, <Player name="Susan" n_chips=00000 n_bet_chips=10000 folded=0>: 10000, <Player name="Lily" n_chips=00000 n_bet_chips=10000 folded=0>: 10000, <Player name="Ethan" n_chips=03700 n_bet_chips=10000 folded=0>: 10000}
+Ethan calls
+> Betting iter, total: 30050
+Finished round of betting, 3 active players, 3 all in players.
+[DEBUG] Pot at the end of betting: <Pot n_chips=30050>
+[DEBUG] Pot total(): 30050
+[DEBUG] Pot _pot contents: {<Player name="James" n_chips=09950 n_bet_chips=00050 folded=1>: 50, <Player name="Susan" n_chips=00000 n_bet_chips=10000 folded=0>: 10000, <Player name="Lily" n_chips=00000 n_bet_chips=10000 folded=0>: 10000, <Player name="Ethan" n_chips=00000 n_bet_chips=10000 folded=0>: 10000}
+Players at the end of betting:
+[DEBUG] Total bets from players: 30050
+<Player name="James" n_chips=09950 n_bet_chips=00050 folded=1>
+  n_bet_chips: 50
+<Player name="Susan" n_chips=00000 n_bet_chips=10000 folded=0>
+  n_bet_chips: 10000
+<Player name="David" n_chips=10000 n_bet_chips=00000 folded=1>
+  n_bet_chips: 0
+<Player name="Lily" n_chips=00000 n_bet_chips=10000 folded=0>
+  n_bet_chips: 10000
+<Player name="Ethan" n_chips=00000 n_bet_chips=10000 folded=0>
+  n_bet_chips: 10000
+<Player name="Olivia" n_chips=10000 n_bet_chips=00000 folded=1>
+  n_bet_chips: 0
+The dealer has dealt the flop: [<Card card=[6 of hearts ♥]>, <Card card=[king of diamonds ♦]>, <Card card=[8 of diamonds ♦]>]
+Skipping betting as no players are free to bet.
+[DEBUG] Pot at the end of betting: <Pot n_chips=30050>
+[DEBUG] Pot total(): 30050
+[DEBUG] Pot _pot contents: {<Player name="James" n_chips=09950 n_bet_chips=00050 folded=1>: 50, <Player name="Susan" n_chips=00000 n_bet_chips=10000 folded=0>: 10000, <Player name="Lily" n_chips=00000 n_bet_chips=10000 folded=0>: 10000, <Player name="Ethan" n_chips=00000 n_bet_chips=10000 folded=0>: 10000}
+Players at the end of betting:
+[DEBUG] Total bets from players: 30050
+<Player name="James" n_chips=09950 n_bet_chips=00050 folded=1>
+  n_bet_chips: 50
+<Player name="Susan" n_chips=00000 n_bet_chips=10000 folded=0>
+  n_bet_chips: 10000
+<Player name="David" n_chips=10000 n_bet_chips=00000 folded=1>
+  n_bet_chips: 0
+<Player name="Lily" n_chips=00000 n_bet_chips=10000 folded=0>
+  n_bet_chips: 10000
+<Player name="Ethan" n_chips=00000 n_bet_chips=10000 folded=0>
+  n_bet_chips: 10000
+<Player name="Olivia" n_chips=10000 n_bet_chips=00000 folded=1>
+  n_bet_chips: 0
+The dealer has dealt the turn card: <Card card=[ace of spades ♠]>
+Skipping betting as no players are free to bet.
+[DEBUG] Pot at the end of betting: <Pot n_chips=30050>
+[DEBUG] Pot total(): 30050
+[DEBUG] Pot _pot contents: {<Player name="James" n_chips=09950 n_bet_chips=00050 folded=1>: 50, <Player name="Susan" n_chips=00000 n_bet_chips=10000 folded=0>: 10000, <Player name="Lily" n_chips=00000 n_bet_chips=10000 folded=0>: 10000, <Player name="Ethan" n_chips=00000 n_bet_chips=10000 folded=0>: 10000}
+Players at the end of betting:
+[DEBUG] Total bets from players: 30050
+<Player name="James" n_chips=09950 n_bet_chips=00050 folded=1>
+  n_bet_chips: 50
+<Player name="Susan" n_chips=00000 n_bet_chips=10000 folded=0>
+  n_bet_chips: 10000
+<Player name="David" n_chips=10000 n_bet_chips=00000 folded=1>
+  n_bet_chips: 0
+<Player name="Lily" n_chips=00000 n_bet_chips=10000 folded=0>
+  n_bet_chips: 10000
+<Player name="Ethan" n_chips=00000 n_bet_chips=10000 folded=0>
+  n_bet_chips: 10000
+<Player name="Olivia" n_chips=10000 n_bet_chips=00000 folded=1>
+  n_bet_chips: 0
+The dealer has dealt the river card: <Card card=[3 of hearts ♥]>
+Skipping betting as no players are free to bet.
+[DEBUG] Pot at the end of betting: <Pot n_chips=30050>
+[DEBUG] Pot total(): 30050
+[DEBUG] Pot _pot contents: {<Player name="James" n_chips=09950 n_bet_chips=00050 folded=1>: 50, <Player name="Susan" n_chips=00000 n_bet_chips=10000 folded=0>: 10000, <Player name="Lily" n_chips=00000 n_bet_chips=10000 folded=0>: 10000, <Player name="Ethan" n_chips=00000 n_bet_chips=10000 folded=0>: 10000}
+Players at the end of betting:
+[DEBUG] Total bets from players: 30050
+<Player name="James" n_chips=09950 n_bet_chips=00050 folded=1>
+  n_bet_chips: 50
+<Player name="Susan" n_chips=00000 n_bet_chips=10000 folded=0>
+  n_bet_chips: 10000
+<Player name="David" n_chips=10000 n_bet_chips=00000 folded=1>
+  n_bet_chips: 0
+<Player name="Lily" n_chips=00000 n_bet_chips=10000 folded=0>
+  n_bet_chips: 10000
+<Player name="Ethan" n_chips=00000 n_bet_chips=10000 folded=0>
+  n_bet_chips: 10000
+<Player name="Olivia" n_chips=10000 n_bet_chips=00000 folded=1>
+  n_bet_chips: 0
+Rank #6246 <Player name="Susan" n_chips=00000 n_bet_chips=10000 folded=0> high card
+Rank #5088 <Player name="Lily" n_chips=00000 n_bet_chips=10000 folded=0> pair
+Rank #6210 <Player name="Ethan" n_chips=00000 n_bet_chips=10000 folded=0> high card
+[{<Player name="James" n_chips=09950 n_bet_chips=00050 folded=1>: 50, <Player name="Susan" n_chips=00000 n_bet_chips=10000 folded=0>: 50, <Player name="Lily" n_chips=00000 n_bet_chips=10000 folded=0>: 50, <Player name="Ethan" n_chips=00000 n_bet_chips=10000 folded=0>: 50}, {<Player name="Susan" n_chips=00000 n_bet_chips=10000 folded=0>: 9950, <Player name="Lily" n_chips=00000 n_bet_chips=10000 folded=0>: 9950, <Player name="Ethan" n_chips=00000 n_bet_chips=10000 folded=0>: 9950}]
+[DEBUG] Resetting pot, current contents: {<Player name="James" n_chips=09950 n_bet_chips=00050 folded=1>: 50, <Player name="Susan" n_chips=00000 n_bet_chips=10000 folded=0>: 10000, <Player name="Lily" n_chips=00000 n_bet_chips=10000 folded=0>: 10000, <Player name="Ethan" n_chips=00000 n_bet_chips=10000 folded=0>: 10000}
+[DEBUG] Pot cleared, new contents: {}
+current total_n_chips_on_table = 60000
+Winnings computation complete. Players:
+<Player name="James" n_chips=09950 n_bet_chips=00000 folded=1>
+<Player name="Susan" n_chips=00000 n_bet_chips=00000 folded=0>
+<Player name="David" n_chips=10000 n_bet_chips=00000 folded=1>
+<Player name="Lily" n_chips=30050 n_bet_chips=00000 folded=0>
+<Player name="Ethan" n_chips=00000 n_bet_chips=00000 folded=0>
+<Player name="Olivia" n_chips=10000 n_bet_chips=00000 folded=1>
+================================================================================
+Round 1 End
+================================================================================
+
+
+
+================================================================================
+Round 2 Start
+================================================================================
+[DEBUG] Resetting pot, current contents: {}
+[DEBUG] Pot cleared, new contents: {}
+player out of chip
