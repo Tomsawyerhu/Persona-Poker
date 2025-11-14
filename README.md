@@ -1,1 +1,1 @@
-# Persona-Poker-A-Multi-Agent-Framework-for-Personalized-Texas-Hold-em-Playing-Styles
+# Persona-Poker: A Multi Agent Framework for Personalized Texas Hold em Playing Styles
