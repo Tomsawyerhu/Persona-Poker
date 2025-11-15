@@ -27,7 +27,7 @@ def timestamp_filename(prefix="", ext=".txt"):
     return f"{prefix}{ts}{ext}"
 
 
-max_games, max_round = 100, 10
+max_games, max_round = 100, 100
 for game_id in range(max_games):
     players = [
         # 紧凶
@@ -171,7 +171,8 @@ for game_id in range(max_games):
                 "who calls too wide, who folds to aggression. Then you strike. "
 
                 "You love position. From the button or cutoff, you raise with suited connectors, small pairs, and broadways — "
-                "not because they’re strong, but because you can control the pot. On the flop, you continuation bet aggressively, "
+                "not because they’re strong, but because you can control the pot. On the flop, you continuation bet "
+                "aggressively,"
                 "but you’re quick to give up if re-raised — unless you have a draw or monster. "
 
                 "Your secret weapon is the check-raise bluff on scary boards (like K-Q-J or flush draws). "
@@ -190,12 +191,14 @@ for game_id in range(max_games):
     # Create the table with the players on it.
     table = PokerTable(players=players, pot=pot)
     # Create the engine that will manage the poker game lifecycle.
+    file_name=timestamp_filename(prefix=f'eight-player-game-{game_id + 1}')
     engine = PokerEngine(
         table=table,
         small_blind=small_blind_amount,
-        big_blind=big_blind_amount)
+        big_blind=big_blind_amount,
+        trace_file=f"trace/eight_players/{file_name.replace('.txt','.jsonl')}")
     # 打开日志文件
-    with open(f'logs/eight_players/{timestamp_filename(prefix=f'eight-player-game-{game_id + 1}')}', 'w', encoding='utf-8') as f:
+    with open(f'logs/eight_players/{file_name}', 'w', encoding='utf-8') as f:
         # 保存原始 stdout
         original_stdout = sys.stdout
         # 重定向 stdout 到文件
